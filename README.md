@@ -21,7 +21,7 @@
 3. Configure & test the connection 
     - It should look like this:
 
-        <img src="./img/connection.png" width="70%">
+        <img src="./img/connection.png" width="80%">
 
     
 ## Resources
