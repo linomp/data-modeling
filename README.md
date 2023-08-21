@@ -8,16 +8,22 @@
 
 ## Setup
 
-1. MySQL server:
+1. Bring up MySQL server:
     - Clone the repo and run this:
         ```
         docker-compose up -d
         ```
 
-2. MySQL Workbench (GUI): 
-    - Download and install from [here](https://dev.mysql.com/downloads/workbench/) (install only the client, not the server)
+2. Install MySQL Workbench (GUI): 
+    - Download from [here](https://dev.mysql.com/downloads/workbench/) (install only the client, not the server)
 
 
+3. Configure & test the connection 
+    - It should look like this:
+
+        <img src="./img/connection.png" width="70%">
+
+    
 ## Resources
 - [Course website](https://www.coursera.org/learn/advanced-data-modeling)
 - [MySQL Official Docker Image](https://hub.docker.com/_/mysql)
