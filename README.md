@@ -20,4 +20,5 @@
 
 ## Resources
 - [Course website](https://www.coursera.org/learn/advanced-data-modeling)
-- [MySQL on Docker](https://www.youtube.com/watch?v=kphq2TsVRIs)
+- [MySQL Official Docker Image](https://hub.docker.com/_/mysql)
+- [MySQL Workbench + Docker tutorial](https://www.youtube.com/watch?v=kphq2TsVRIs)
