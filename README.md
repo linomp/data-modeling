@@ -1,4 +1,4 @@
-# Coursera Adv. Data Modeling Course
+# Coursera Advanced Data Modeling Course
 
 ## Syllabus
 - [Week 1: Data modeling and management](./notes.md#week-1-data-modeling-and-management)
