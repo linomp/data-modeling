@@ -23,6 +23,11 @@
 
         <img src="./img/connection.png" width="80%">
 
+4. Once everything is set up, you can pack everything in a script and run it:
+    ```powershell
+    start_all.bat
+    ```
+
     
 ## Resources
 - [Course website](https://www.coursera.org/learn/advanced-data-modeling)
