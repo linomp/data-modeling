@@ -27,7 +27,6 @@
     ```powershell
     start_all.bat
     ```
-
     
 ## Resources
 - [Course website](https://www.coursera.org/learn/advanced-data-modeling)
