@@ -24,7 +24,8 @@
         <img src="./img/connection.png" width="80%">
 
 4. Once everything is set up, you can pack everything in a script and run it:
-    ```powershell
+    ```cmd
+    echo docker-compose up -d ^&^& "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\MySQLWorkbench.exe" > start_services.bat
     start_all.bat
     ```
     
