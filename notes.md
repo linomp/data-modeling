@@ -220,4 +220,4 @@ Global Super Store sells furniture, office supplies and technology products arou
 - [Snowflake Schemas vs Star Schemas: 5 key differences](https://www.integrate.io/blog/snowflake-schemas-vs-star-schemas-what-are-they-and-how-are-they-different/)
 
 
-## Week 2: Data Analytics
+## Week 3: Data Analytics
