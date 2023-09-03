@@ -21,9 +21,28 @@
     - transitive dependency is when a non-key attribute is dependent on another non-key attribute
     - example: orders table that contains city and zip code. Zip code is dependent on city. they are both non-key attributes, so this is a transitive dependency.  One solution is to keep only ZIP code in the orders table, and create a new table with city and ZIP code.
 
-## Week 2: Dimensional Data Modeling
+## Week 2: Data Warehousing
 
-- ERD & Object Oriented data models are built for transactional systems, but for building data warehouses we need them to be optimized for access and analytical queries
+### Data Warehouse
+- A DW is a centralized data repository that aggregates, stores, and processes large amounts of data from multiple sources. Users can then query this data to perform data analysis.
+
+- 4 Characteristics:
+    - Subject-oriented: they provide information on chosen subjects or topics.
+    - Integrated: they integrate data from a range of different sources.
+    - Non-volatile.
+    - Time variant: they aggregate data over a long period of time to measure change.
+
+- The architecture of the data warehouse consists of the following components:
+    - Data sources: which consist of the data that the organization relies on for its insights.
+    - Data staging area: this is where data is prepared for analytics through the ETL or extract transform and load process.
+    - The data warehouse itself where data is stored.
+    - Data marts: These are subject-oriented databases that meet the demands of specific users. 
+
+        ![Alt text](img/dw_arch.png)
+
+### Dimensional Data Modeling
+
+ERD & Object Oriented data models are built for transactional systems, but for building data warehouses we need them to be optimized for access and analytical queries
 
 ### Facts & Dimensions
 - Dimensions: Data elements that define a **context** (or perspective) for the measures. 
@@ -138,3 +157,67 @@ Global Super Store sells furniture, office supplies and technology products arou
         <img src="img/dice_example.png" width="70%">
 
         <img src="img/dice_result.png" width="70%">
+
+### Dimensional Modeling in Practice
+
+- 4 key steps:
+    - Identify the business process to analyze
+    - Identify the granularity
+        - what detail is required for the data warehouse to address the problem?
+        - waht's the lowest level of detail required?
+        - example, global super store: for time dimension, they require yearly & daily sales data.   And for location dimension, they requires global and local sales data.
+    - Identify the dimensions
+        - in what context do we need to analyze the business data?
+    - Identify the facts
+        - what do you want to measure?
+
+- Then you can create the schema
+
+### Dimensional Model Example
+
+- Step 1: Identify key information 
+
+    - Identify the grain: 
+    
+        Global Super Store is an international company that has been operating for several years. So, they need to investigate their sales at the following levels of granularity:
+
+        - Region, country and city.
+        - Year, quarter, month, day or event levels.
+        - Category, subcategory and items.
+
+    - Identify the facts: 
+        
+        Global Super Store must investigate all the measures that impact the sales including:
+
+        - The buy and sale prices of all products.
+        - The quantity sold of each product.
+        - The shipping cost of each product. 
+
+    - Identify the dimensions: 
+
+        Global Super Store must examine the measures against the following key dimensions:
+
+        - Location.
+        - Time.
+        - Product.
+        - Customers.
+ 
+- Step 2: Create a star schema
+
+    The following ER diagram illustrates a suitable Star schema for the Global Super Store dimensional model.
+   
+
+    ![Alt text](img/star_schema_exercise.png)
+
+  
+- Step 3: Create a snowflake schema
+
+    The following ER diagram illustrates a suitable Snowflake schema for Global Super Store dimensional model.
+
+    ![Alt text](img/snowflake_schema_exercise.png)
+
+### Resources
+- [Snowflake Schemas vs Star Schemas: 5 key differences](https://www.integrate.io/blog/snowflake-schemas-vs-star-schemas-what-are-they-and-how-are-they-different/)
+
+
+## Week 2: Data Analytics
